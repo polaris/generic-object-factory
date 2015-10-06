@@ -9,10 +9,6 @@ class Rectangle : public Shape {
 public:
     Rectangle();
     void draw();
-
-    static auto Create() {
-        return std::make_unique<Rectangle>();
-    }
 };
 
 #endif

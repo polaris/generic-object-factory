@@ -9,10 +9,6 @@ class Circle : public Shape {
 public:
     Circle();
     void draw();
-
-    static auto Create() {
-        return std::make_unique<Circle>();
-    }
 };
 
 #endif
