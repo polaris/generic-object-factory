@@ -12,7 +12,7 @@ public:
         return map_.emplace(key, value).second;
     }
 
-    auto create(IdentifierType key) {
+    auto create(IdentifierType key) const {
         const auto itr = map_.find(key);
         if (itr != map_.end()) {
             return itr->second();
