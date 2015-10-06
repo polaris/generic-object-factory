@@ -9,8 +9,7 @@ public:
     using identifier_type = IdentifierType;
 
     bool registerCreator(IdentifierType key, ProductCreator value) {
-        map_.emplace(key, value);
-        return true;
+        return map_.emplace(key, value).second;
     }
 
     auto create(IdentifierType key) {
