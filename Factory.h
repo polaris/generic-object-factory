@@ -6,8 +6,6 @@
 template <typename IdentifierType, typename ProductCreator, template <class ...> class Map = std::map>
 class Factory {
 public:
-    using identifier_type = IdentifierType;
-
     bool registerCreator(IdentifierType key, ProductCreator value) {
         return map_.emplace(key, value).second;
     }
