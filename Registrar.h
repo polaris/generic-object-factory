@@ -3,13 +3,13 @@
 
 #include <memory>
 
-template <typename Product, typename Factory, typename IdentifierType, IdentifierType Identifier>
+template <typename Product, typename Product::IdentifierType Identifier>
 class Registrar {
     static const bool registered;
 };
 
-template <typename Product, typename Factory, typename IdentifierType, IdentifierType Identifier>
-const bool Registrar<Product, Factory, IdentifierType, Identifier>::registered = 
-    Factory::instance().registerCreator(Identifier, Product::Create);
+template <typename Product, typename Product::IdentifierType Identifier>
+const bool Registrar<Product, Identifier>::registered = 
+    Product::FactoryType::instance().registerCreator(Identifier, Product::Create);
 
 #endif

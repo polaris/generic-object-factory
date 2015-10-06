@@ -1,6 +1,5 @@
 #include "Rectangle.h"
 #include "Registrar.h"
-#include "ShapeFactory.h"
 
 #include <iostream>
 
@@ -12,4 +11,4 @@ void Rectangle::draw() {
     std::cout << "Rectangle::draw" << std::endl;
 }
 
-template class Registrar<Rectangle, ShapeFactory, ShapeFactory::identifier_type, 1>;
+template class Registrar<Rectangle, 1>;

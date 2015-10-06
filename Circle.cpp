@@ -1,6 +1,5 @@
 #include "Circle.h"
 #include "Registrar.h"
-#include "ShapeFactory.h"
 
 #include <iostream>
 
@@ -12,4 +11,4 @@ void Circle::draw() {
     std::cout << "Circle::draw" << std::endl;
 }
 
-template class Registrar<Circle, ShapeFactory, ShapeFactory::identifier_type, 0>;
+template class Registrar<Circle, 0>;
