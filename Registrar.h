@@ -10,7 +10,7 @@ class Registrar {
 
 template <typename Product, typename Product::IdentifierType Identifier>
 const bool Registrar<Product, Identifier>::registered = 
-    Product::FactoryType::instance().registerCreator(Identifier, [] {
+    Product::Factory::instance().registerCreator(Identifier, [] {
             return std::make_unique<Product>();
         });
 

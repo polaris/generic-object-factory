@@ -10,7 +10,7 @@ class Shape {
 public:
     using IdentifierType = int;
     using ProductCreatorType = std::function<std::unique_ptr<Shape> ()>;
-    using FactoryType = Factory<IdentifierType, ProductCreatorType>;
+    using Factory = Factory<IdentifierType, ProductCreatorType>;
 
     virtual ~Shape() {}
     virtual void draw() = 0;    
