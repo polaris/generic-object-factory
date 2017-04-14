@@ -2,10 +2,11 @@
 #define __Circle_H
 
 #include "Shape.h"
+#include "Creatable.h"
 
-#include <memory>
-
-class Circle : public Shape {
+class Circle
+: public Shape
+, public Creatable<Circle> {
 public:
     Circle();
     void draw();

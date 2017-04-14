@@ -1,8 +1,8 @@
 #include "Shape.h"
 
 int main() {
-    auto r1 = Shape::Factory::instance().create(0);
-    auto r2 = Shape::Factory::instance().create(1);
+    std::unique_ptr<Shape> r1 = Shape::Factory::instance().create<Shape>(0);
+    std::unique_ptr<Shape> r2 = Shape::Factory::instance().create<Shape>(1);
     r1->draw();
     r2->draw();
 }

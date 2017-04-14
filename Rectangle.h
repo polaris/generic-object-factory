@@ -2,10 +2,11 @@
 #define __Rectangle_H
 
 #include "Shape.h"
+#include "Creatable.h"
 
-#include <memory>
-
-class Rectangle : public Shape {
+class Rectangle
+: public Shape
+, public Creatable<Rectangle> {
 public:
     Rectangle();
     void draw();
